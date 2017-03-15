@@ -15,9 +15,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() { console.log('in ready');
+        $(document).ready(function() { 
         $('#reset_count_button').click(function() {
-            console.log('in click');
             $.ajax({
                 method: "POST",
                 url: "./api/devicetalkback",
@@ -83,6 +82,7 @@
 
 <div class="container">
 	<button id="reset_count_button">Reset Count</button>
+</div>
 </body>
 
 </html>
