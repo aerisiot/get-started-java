@@ -10,6 +10,26 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { console.log('in ready');
+        $('#reset_count_button').click(function() {
+            console.log('in click');
+            $.ajax({
+                method: "POST",
+                url: "./api/devicetalkback",
+                contentType: "application/json",
+                data: JSON.stringify({reset: true})
+            })
+            .done(function(data) {
+                console.log(data);
+            });
+        });
+        });
+    </script>
 </head>
 
 <body>
@@ -23,10 +43,6 @@
 
         <p id="databaseNames" class="lead text-center"></p>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
     	//Submit data when enter key is pressed
@@ -54,7 +70,7 @@
           $.get("./api/visitors")
               .done(function(data) {
                   if(data.length > 0) {
-                    $('#databaseNames').html("Database contents: " + JSON.stringify(data));
+                    $('#databaseNames').text("Database contents: " + JSON.stringify(data));
                   }
               });
           }
@@ -64,6 +80,9 @@
           
           
     </script>
+
+<div class="container">
+	<button id="reset_count_button">Reset Count</button>
 </body>
 
 </html>
