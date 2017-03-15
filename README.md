@@ -1,3 +1,12 @@
+This repository was forked from 
+https://github.com/IBM-Bluemix/get-started-java
+and integrated with code from
+https://hub.jazz.net/project/chunbintang/bluemixmqtt/overview
+
+Its purpose is to demonstrate sending MQTT messages from a web application to a device.
+Below are the instructions for working with the "get-started-java" project, which includes deploying code to Bluemix.
+################################################
+
 # Getting started with Liberty on Bluemix
 By following this guide, you'll set up a development environment, deploy an app locally and on Bluemix, and integrate a Bluemix database service in your app.
 
