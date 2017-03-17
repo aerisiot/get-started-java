@@ -39,7 +39,8 @@ public class DeviceTalkBackAPI extends Application {
 	final AppTest appTest = AppTestFactory.getInstance();
 
     /**
-     * Teslls the device to reset its count
+     * Tells the device to reset its count.
+     * Note that this API is for example purposes only.
      * 
      * REST API example:
      * <code>
@@ -55,13 +56,13 @@ public class DeviceTalkBackAPI extends Application {
      * <code>
      * "success"
      * </code>
-     * @param visitor The new Visitor to create.
-     * @return The Visitor after it has been stored.  This will include a unique ID for the Visitor.
+     * @param request a dummy request body
+     * @return the string "success"
      */
     @POST
     @Produces("application/text")
     @Consumes("application/json")
-    public String newToDo(Map<String,Boolean> visitor) {
+    public String newToDo(Map<String,Boolean> request) {
       if(appTest == null) {
     	  return String.format("Nope, store was null");
       }
