@@ -4,7 +4,7 @@ and integrated with code from
 https://hub.jazz.net/project/chunbintang/bluemixmqtt/overview
 
 Its purpose is to demonstrate sending MQTT messages from a web application to a device.
-Below are the instructions for working with the "get-started-java" project, which includes deploying code to Bluemix.
+Below are the instructions for working with the "get-started-java" project, which includes deploying code to Bluemix. Note that the steps about connecting to a database are not necessary to demonstrate MQTT capabilities.
 ################################################
 
 # Getting started with Liberty on Bluemix
